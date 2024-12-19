@@ -2,11 +2,14 @@
     margin: 0;
     border: 0;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 .banner{
     background-image: url("./mountain.jpg");
     background-size: cover;
     height: 100vh;
+    width: 100vw;
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -16,7 +19,7 @@
     font-size: 25px;
     text-shadow: 4px 4px 10px black;
 }
-button{
+.banner button{
     background-color: transparent;
     color:#E0DEDB;
     padding:9px 25px ;
@@ -27,9 +30,79 @@ button{
     cursor: pointer;
     text-shadow: 1px 1px 15px black;
 }
-button:hover{
+.banner button:hover{
     background-color:#E0DEDB;
     color:#0C1814;
 }
 
+.navbar{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0,0,0.4);
+    width: 100vw;
+    height: 8vh;
+    padding:0px 10px;
+    color:white;
+    text-shadow: 1px 1px 5px black;
+    border: none;
+}
 
+.anchor{
+    display: flex;
+    align-items: center;
+    width: 40vw;
+    justify-content: space-around;
+    padding: 0px 20px;
+}
+.anchor a{
+    text-decoration: none;
+    color:#E0DEDB;
+    font-size: 20px;
+    transition: margin 0.2s ease;
+}
+.anchor a:hover{
+    margin-bottom: 10px;
+    color:white;
+}
+.pop{
+    text-align: center;
+    width: 100vw;
+    margin-top: 10px;
+    background-color: #FBFAFF;
+}
+.cardsection{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 85vh;
+    width: 100vw;
+}
+.card{
+    width: 25vw;
+    height: 60vh;
+    box-shadow:5px 5px 10px lightgray;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+.card img{
+    height: 80%;
+}
+.card button{
+    background-color: black;
+    border-radius: 10px;
+    color:white;
+    padding:5px 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.card:hover{
+    transform:scale(1.1);
+}
